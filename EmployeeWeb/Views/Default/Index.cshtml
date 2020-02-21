@@ -1,0 +1,31 @@
+﻿
+@model IEnumerable<Employee>
+@*@{
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }*@
+
+@*<!DOCTYPE html>
+
+    <html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>Index</title>
+
+    </head>
+    <body>*@<table>
+    <tr>
+        <td>Id</td>
+        <td>Name</td>
+        <td>Dept</td>
+    </tr>
+    @foreach (var em in Model)
+    {
+        <tr>
+            <td>@em.id</td>
+            <td>@em.name</td>
+            <td>@em.Dept</td>
+        </tr>
+    }
+</table>
+@*</body>
+    </html>*@

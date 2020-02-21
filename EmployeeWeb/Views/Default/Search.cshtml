@@ -1,0 +1,45 @@
+﻿@model Employee;
+@*@{
+        Layout = null;
+    }*@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Search</title>
+</head>
+<body>
+    <table border="1">
+        @*@{
+                var emp1 = ViewData["employee"] as AspCoreApplication.Models.Employee;
+            }*@
+        @*@{
+                var emp1 = ViewBag.employee as AspCoreApplication.Models.Employee;
+            }*@
+        <tr>
+            <td>Id</td>
+            <td>Name</td>
+            <td>Dept</td>
+        </tr>
+        <tr>
+
+            <td>@Model.id</td>
+            <td>@Model.name</td>
+            <td>@Model.Dept</td>
+            @*<td>@emp1.id</td>
+                <td>@emp1.name</td>
+                <td>@emp1.Dept</td>*@
+            @*<td>@ViewBag.id</td>
+                <td>@ViewBag.name</td>
+                <td>@ViewBag.dept</td>*@
+        </tr>
+        @*<tr>
+                <td>@ViewBag.employee.id</td>
+                <td>@ViewBag.employee.name</td>
+                <td>@ViewBag.employee.Dept</td>
+            </tr>*@
+    </table>
+</body>
+</html>

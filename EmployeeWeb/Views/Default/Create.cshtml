@@ -1,0 +1,46 @@
+﻿@model Employee
+@{
+    ViewData["Title"] = "Create";
+}
+@*@@using (Html.BeginForm())
+    {
+    <h1>Create</h1>
+    @Html.Display("id")
+    <br />
+    @Html.DisplayFor(m => m.id)
+    <br />
+    @Html.Display("name")
+    <br />
+    @Html.DisplayFor(m => m.name)
+    <br />
+    @Html.Display("Dept")
+    <br />
+    @Html.EditorFor(m => m.Dept)
+    Id: @Html.TextBoxFor(m => m.id)
+        <br />
+        <br />
+        Name  :  @Html.TextBoxFor(m => m.name)
+        <br />
+        <br />
+        Dept:@Html.TextBoxFor(m => m.Dept)
+        <input type="submit" value="submit" action="/Employee/Create/1" />
+    }*@
+@*<h1>Create</h1>
+    Name  :  @Html.TextBox("TextBox1")<br /><br/>
+    Address: @Html.TextArea("TextArea1")<br /><br />
+    Password:@Html.Password("password")<br/><br />
+    Program :@Html.ListBox("l1",new MultiSelectList(new[] {"ASP","ASP.NET"} ))*@
+<form asp-controller="Default" asp-action="Create" method="post">
+    <div class="form-row">
+        <label asp-for="name" class="col-form-label">Name</label>
+        <input asp-for="name" class="" />
+    </div>
+    <div class="form-row">
+        <label asp-for="id" class="col-form-label">ID</label>
+        <input asp-for="id" class="" />
+    </div>
+    <div class="form-row">
+        <label asp-for="Dept" class="col-form-label">Dept</label>
+        <select asp-for="Dept" class="" asp-items="Html.GetEnumSelectList<Dept>()"></select>
+    </div>
+</form>

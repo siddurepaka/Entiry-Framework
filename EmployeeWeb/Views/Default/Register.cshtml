@@ -1,0 +1,22 @@
+﻿@model Employee
+@{
+    ViewData["Title"] = "Register";
+}
+
+<h1>Register</h1>
+<form asp-action="Register" method="post" asp-controller="Default">
+    <div>
+        <label asp-for="id">ID</label>
+        <input asp-for="id" required />
+    </div>
+    <div>
+        <label asp-for="name">NAme</label>
+        <input asp-for="name" required />
+    </div>
+    <div>
+        <label asp-for="Dept">Dept</label>
+        <input asp-for="Dept" required />
+    </div>
+    <input type="submit" value="Register" />
+</form>
+
